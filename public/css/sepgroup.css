@@ -1,0 +1,16 @@
+.login-box{
+    margin: 4% auto;
+    width: 550px;
+    height: 8rem;
+    background-color: rgb(50, 53, 70);
+    border-radius: 15px;
+}
+
+input{
+    margin:20px;
+    width:42%;
+    color: black;
+}
+button{
+    background-color:red;
+}

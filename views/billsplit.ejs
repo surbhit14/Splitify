@@ -1,0 +1,11 @@
+<%- include("navbar") %>
+<body>
+    <h3>Split Bill</h3>
+
+    <p> <%=nom%> paid </p>
+    <% for (var i=0;i<arr.length;i++) { %>
+        <p><%=arr[i]%> pays <%=nom%> <%=amt%> </p>
+
+        <% } %>
+</body>
+</html>

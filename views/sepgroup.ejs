@@ -1,0 +1,35 @@
+
+<%- include("navbar") %>
+<link rel="stylesheet" href="/css/sepgroup.css">
+<style>
+    *{
+        text-align: center;
+    }
+</style>
+<body>
+    
+<h3>Group Name: <%=group.name%></h3>
+<h4>Members: </h4>
+
+<% for (var i=0;i<group.members.length;i++) { %>
+    <p>Name:<%=group.members[i]%></p>
+    <% } %>
+
+    <h3>Add Member</h3>
+
+    <div class="login-box">
+    <form action="/group/<%=group.name%>/addmember" method="POST">
+        <input type="text" placeholder="UserName of user to be added" name="username1">
+        <button type="submit">Add Member</button>
+    </form>
+</div>
+
+<div class="login-box">
+    <form action="/group/<%=group.name%>/split" method="POST">
+        <input type="text" placeholder="UserName of user who paid" name="username2">
+        <input type="number" placeholder="Amount paid" name="amount">
+        <button type="submit">Split Bill</button>
+    </form>
+</div>
+</body>
+</html>

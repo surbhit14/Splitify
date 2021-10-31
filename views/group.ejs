@@ -1,0 +1,33 @@
+<%- include("navbar") %>
+    <link rel="stylesheet" href="/css/group.css">
+    <link rel="stylesheet" href="/css/login.css">
+<body>
+  <h3>Your Current Groups are:</h3>
+    <% for (var i=0;i<groups.length;i++) { %>
+      <div class="group">
+        <a href="/group/<%= groups[i].name%>">
+        <p>Group-Name:<%=groups[i].name%></p>
+        <p>Description:<%=groups[i].desc%></p>
+        </a>
+      </div>
+        <% } %>
+
+
+        <h3>Create New Group:</h3>
+        <div class="login-box">
+    <form action="/group" method="POST">
+        <div class="textbox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="GroupName" name="groupname">
+        </div>
+      
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <input type="text" placeholder="desc" name="desc">
+        </div>
+      
+        <button type="submit" class="btn">Add Group</button>
+      </form>
+    </div>
+</body>
+</html>

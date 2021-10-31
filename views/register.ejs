@@ -1,0 +1,25 @@
+<%- include("navbar") %>
+    <link rel="stylesheet" href="/css/login.css">
+    <div class="login-box">
+        <h1>Sign Up</h1>
+        <form action="/register" method="POST">
+        <div class="textbox">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Name" name="username">
+        </div>
+      
+        <div class="textbox">
+          <i class="fas fa-envelope"></i>
+          <input type="text" placeholder="Email" name="email">
+        </div>
+      
+        <div class="textbox">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" name="password">
+        </div>
+      
+        <button type="submit" class="btn" >SignUp</button>
+      </form>
+      </div>
+</body>
+</html>
